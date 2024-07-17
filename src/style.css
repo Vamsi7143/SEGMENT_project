@@ -1,0 +1,209 @@
+  .App {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling outside the viewport */
+  }
+  
+  .left-side {
+    width: 50%;
+    background-color: #367457;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .left-side h2 {
+    margin-bottom: 20px;
+  }
+  
+  .save-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .right-side {
+    width: 50%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+    overflow-y: auto; /* Add scroll bar for content overflow */
+  }
+  
+  .popup {
+    padding: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .popup h2 {
+    margin-bottom: 20px;
+  }
+  
+  .popup input[type="text"] {
+    width: calc(100% - 20px); /* Adjust input width to fit inside container */
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: navy;
+  }
+  
+  .input-container {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .schema-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .schema-item label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .schema-item input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .remove-button {
+    background-color: #4a4243;
+    color: white;
+    border: none;
+    /* border-radius: 50%; */
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .remove-button:hover {
+    background-color: #c82333;
+  }
+  
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .add-schema-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  .add-schema-button:hover {
+    background-color: #218838;
+  }
+  
+  .add-new-schema-link {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-new-schema-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-buttons {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cancel-button {
+    background-color: #6c757d;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .submit-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  .blur {
+    filter: blur(5px);
+  }
+
+  
+  @media (max-width: 768px) {
+    .App {
+      flex-direction: column;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%;
+    }
+  
+    .right-side {
+      padding: 20px;
+      height: 100vh; /* Ensure full height on smaller screens */
+    }
+  }
